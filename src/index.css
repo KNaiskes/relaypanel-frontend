@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    background-color: #5578bf;
+    margin-bottom: 30px;
+    border-top: 2px solid #000000;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: auto;
+}
+
+.navbar a {
+    float: left;
+    font-size: 18px;
+    color: white;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+.navbar a:hover { color: white; background-color: #4C6CAB; }
