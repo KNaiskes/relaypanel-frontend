@@ -14,7 +14,7 @@ export function RelayList() {
 	    })
 	return () => mounted = false;
     }, [])
-    console.log(list);
+
     return (
 	<div className="App">
 	    <ul>

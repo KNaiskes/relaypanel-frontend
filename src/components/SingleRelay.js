@@ -16,8 +16,7 @@ export function SingleRelay() {
 	    })
 	return () => mounted = false;
     }, [])
-    console.log(relay);
-    console.log(typeof relay);
+
     return (
 	<div className="SingleRelay">
 	    <h1>{relay.name}</h1>
