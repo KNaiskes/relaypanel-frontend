@@ -14,11 +14,12 @@ export function RelayList() {
 	    })
 	return () => mounted = false;
     }, [])
-
+    console.log(list);
     return (
 	<div className="App">
 	    <ul>
-		{list.map(item => <li key={item.name}>{item.name}</li>)}
+		{list.map(item => <li key={item.name}>
+		    <a href={`relays/${item.id}`}>{item.name}</a></li>)}
 	    </ul>
 	</div>
     );
