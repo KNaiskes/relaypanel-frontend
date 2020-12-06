@@ -21,6 +21,8 @@ export function SingleRelay() {
     return (
 	<div className="SingleRelay">
 	    <h1>{relay.name}</h1>
+	    <h1>{relay.device}</h1>
+	    <h1>{JSON.stringify(relay.status)}</h1>
 	</div>
     );
 }
