@@ -17,9 +17,15 @@ export function RelayList() {
 
     return (
 	<div className="App">
-	    <ul>
-		{list.map(item => <li key={item.name}>{item.name}</li>)}
-	    </ul>
+	    <table>
+		<tr>
+		    <th>Name</th>
+		    <th>Status</th>
+		</tr>
+		    {list.map(item => <tr><td key={item.name}>
+					  <a href={`relays/${item.id}`}>{item.name}</a></td>
+					  <td>{JSON.stringify(item.status)}</td></tr>)}
+	    </table>
 	</div>
     );
 }

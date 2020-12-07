@@ -16,11 +16,21 @@ export function SingleRelay() {
 	    })
 	return () => mounted = false;
     }, [])
-    console.log(relay);
-    console.log(typeof relay);
+
     return (
 	<div className="SingleRelay">
-	    <h1>{relay.name}</h1>
+	    <table>
+		<tr>
+		    <th>Name</th>
+		    <th>Device</th>
+		    <th>Status</th>
+		</tr>
+		<tr>
+		    <td>{relay.name}</td>
+		    <td>{relay.device}</td>
+		    <td>{JSON.stringify(relay.status)}</td>
+		    </tr>
+	    </table>
 	</div>
     );
 }
