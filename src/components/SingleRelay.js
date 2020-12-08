@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { GetSingleRelay } from './service/relay/relay';
+import { GetSingleRelay, UpdateState } from './service/relay/relay';
 import { useParams } from 'react-router-dom';
 
 export function SingleRelay() {
@@ -16,6 +16,9 @@ export function SingleRelay() {
 	    })
 	return () => mounted = false;
     }, [])
+
+    const data = {'name': 'fkfkfkfk', 'device': 'fdkfkfk', 'status': false };
+    UpdateState(1, data);
 
     return (
 	<div className="SingleRelay">
