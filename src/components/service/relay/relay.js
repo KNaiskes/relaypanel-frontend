@@ -12,5 +12,14 @@ export function GetSingleRelay(id) {
     const url = `${BASE_URL}${id}`;
     return fetch(url, {headers,})
 	.then(data => data.json())
-    console.log(url)
+    //console.log(url)
+}
+
+export function UpdateState(id, data) {
+    const url = `${BASE_URL}${id}`;
+    fetch(url, {
+	method: 'PUT',
+	body: JSON.stringify(data), headers})
+	.then(response => response.json())
+	//.then(json => console.log(json))
 }
