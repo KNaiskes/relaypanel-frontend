@@ -28,16 +28,18 @@ export function SingleRelay() {
     return (
 	<div className="SingleRelay">
 	    <table>
-		<tr>
-		    <th>Name</th>
-		    <th>Device</th>
-		    <th>Status</th>
-		</tr>
-		<tr>
-		    <td>{relay.name}</td>
-		    <td>{relay.device}</td>
-		    <td>{JSON.stringify(relay.status)}</td>
+		<tbody>
+		    <tr>
+			<th>Name</th>
+			<th>Device</th>
+			<th>Status</th>
 		    </tr>
+		    <tr>
+			<td>{relay.name}</td>
+			<td>{relay.device}</td>
+			<td>{JSON.stringify(relay.status)}</td>
+		    </tr>
+		</tbody>
 	    </table>
 		<form>
 		    <input type="checkbox"
