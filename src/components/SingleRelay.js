@@ -37,15 +37,16 @@ export function SingleRelay() {
 		    <tr>
 			<td>{relay.name}</td>
 			<td>{relay.device}</td>
-			<td>{JSON.stringify(relay.status)}</td>
+			<td>
+			    <label class="switch">
+				<input type="checkbox"
+				       onChange={updateState} checked={relay.status || false}/>
+				<span class="slider round"></span>
+			    </label>
+			</td>
 		    </tr>
 		</tbody>
 	    </table>
-		<form>
-		    <input type="checkbox"
-			   onChange={updateState} checked={relay.status || false} value="submit"/>fk
-
-	    </form>
 	</div>
     );
 }
