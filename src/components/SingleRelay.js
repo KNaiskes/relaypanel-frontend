@@ -17,7 +17,7 @@ export function SingleRelay() {
 		}
 	    })
 	return () => mounted = false;
-    }, [])
+    }, [id])
 
     return (
 	<div className="SingleRelay">
