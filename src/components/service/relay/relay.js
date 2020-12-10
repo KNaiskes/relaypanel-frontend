@@ -15,7 +15,7 @@ export function GetSingleRelay(id) {
     //console.log(url)
 }
 
-export function UpdateState(id, data) {
+export function UpdateRelay(id, data) {
     const url = `${BASE_URL}${id}`;
     fetch(url, {
 	method: 'PUT',
