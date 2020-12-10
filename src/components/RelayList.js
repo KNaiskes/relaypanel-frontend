@@ -19,15 +19,17 @@ export function RelayList() {
     return (
 	<div className="App">
 	    <table>
-		<tr>
-		    <th>Name</th>
-		    <th>Status</th>
-		</tr>
-		    {list.map(item => <tr><td key={item.name}>
+		<tbody>
+		    <tr>
+			<th>Name</th>
+			<th>Status</th>
+		    </tr>
+		    {list.map(item => <tr key={item.name}><td>
 					  <a href={`relays/${item.id}`}>{item.name}</a></td>
 					  <td><UpdateRelayState {...item} /></td>
-					  </tr>
+				      </tr>
 			     )}
+		</tbody>
 	    </table>
 	</div>
     );
