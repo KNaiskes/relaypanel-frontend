@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import { GetSingleRelay, UpdateState } from './service/relay/relay';
+import { GetSingleRelay } from './service/relay/relay';
 import { useParams } from 'react-router-dom';
+
+import { UpdateRelayState } from './UpdateState';
 
 export function SingleRelay() {
     const [relay, setRelay] = useState([]);
@@ -17,14 +19,6 @@ export function SingleRelay() {
 	return () => mounted = false;
     }, [])
 
-    function updateState() {
-	const data = {
-	    'name': relay.name, 'device': relay.device,'status': !relay.status
-	};
-	UpdateState(id, data);
-	window.location.reload(false);
-}
-
     return (
 	<div className="SingleRelay">
 	    <table>
@@ -38,11 +32,7 @@ export function SingleRelay() {
 			<td>{relay.name}</td>
 			<td>{relay.device}</td>
 			<td>
-			    <label class="switch">
-				<input type="checkbox"
-				       onChange={updateState} checked={relay.status || false}/>
-				<span class="slider round"></span>
-			    </label>
+			    <UpdateRelayState {...relay} />
 			</td>
 		    </tr>
 		</tbody>
