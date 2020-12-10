@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { GetRelayList } from './service/relay/relay';
+import { UpdateRelayState } from './UpdateState';
 
 export function RelayList() {
     const [list, setList] = useState([]);
@@ -24,7 +25,9 @@ export function RelayList() {
 		</tr>
 		    {list.map(item => <tr><td key={item.name}>
 					  <a href={`relays/${item.id}`}>{item.name}</a></td>
-					  <td>{JSON.stringify(item.status)}</td></tr>)}
+					  <td><UpdateRelayState {...item} /></td>
+					  </tr>
+			     )}
 	    </table>
 	</div>
     );
