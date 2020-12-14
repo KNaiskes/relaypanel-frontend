@@ -11,8 +11,9 @@ export function UpdateRelayState(relay) {
 		<input type="checkbox"
 		       onChange={ () => {
 			   UpdateRelay(relay.id, data)
-			   window.location.reload(false)}
-				}
+			   setTimeout(window.location.reload.bind(window.location), 250);
+		       }
+		       }
 		       checked={relay.status || false}/>
 		<span className="slider round"></span>
 	    </label>
