@@ -16,7 +16,7 @@ function App() {
 	    <Switch>
 	    <Route path='/' exact component={RelayList} />
 	    <Route path='/relays/:id' exact component={SingleRelay} />
-	    <Route path='/update' exact component={UpdateForm} />
+	    <Route path='/relays/:id/update' exact component={UpdateForm} />
 	    </Switch>
 	    </BrowserRouter>
 	    </div>
