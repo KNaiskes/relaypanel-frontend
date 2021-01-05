@@ -6,6 +6,7 @@ import { RelayList } from './components/RelayList';
 import { SingleRelay } from './components/SingleRelay';
 
 import { Navbar } from './components/Navbar';
+import { UpdateForm } from './components/updateForm';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
 	    <Switch>
 	    <Route path='/' exact component={RelayList} />
 	    <Route path='/relays/:id' exact component={SingleRelay} />
+	    <Route path='/relays/:id/update' exact component={UpdateForm} />
 	    </Switch>
 	    </BrowserRouter>
 	    </div>
