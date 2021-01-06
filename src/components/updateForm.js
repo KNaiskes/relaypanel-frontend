@@ -36,6 +36,9 @@ export function UpdateForm() {
 		name="updateName"
 		ref={register({ required: true, maxLength: 10})}
 	    />
+	    {errors.updateName && errors.updateName.type == "required" && (
+		<p>This field is required</p>
+	    )}
 	    <label>Update device type</label>
 	    <input
 		name="updateDevice"
