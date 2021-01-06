@@ -24,7 +24,7 @@ export function UpdateForm() {
     const onSubmit = data => {
 	console.log(data);
 	relay.name = data.updateName;
-	relay.device = data.updateDevice;
+	if (data.updateDevice != "") { relay.device = data.updateDevice; }
 	//console.log("Relay: ", relay);
 	UpdateRelay(id, relay)
     };
@@ -36,10 +36,13 @@ export function UpdateForm() {
 		name="updateName"
 		ref={register({ required: true, maxLength: 10})}
 	    />
+	    {errors.updateName && errors.updateName.type == "required" && (
+		<p>This field is required</p>
+	    )}
 	    <label>Update device type</label>
 	    <input
 		name="updateDevice"
-		ref={register({ required: true, maxLength: 10 })}
+		ref={register({ required: false, maxLength: 10})}
 	    />
 	    {errors.exampleRequired && <p>This field is required</p>}
 	    <input type="submit" />
