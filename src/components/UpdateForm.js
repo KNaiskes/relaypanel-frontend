@@ -30,22 +30,27 @@ export function UpdateForm() {
     };
 
     return (
-	<form onSubmit={handleSubmit(onSubmit)}>
-	    <label>Update Name</label>
-	    <input
-		name="updateName"
-		ref={register({ required: true, maxLength: 10})}
-	    />
-	    {errors.updateName && errors.updateName.type === "required" && (
-		<p>This field is required</p>
-	    )}
-	    <label>Update device type</label>
-	    <input
-		name="updateDevice"
-		ref={register({ required: false, maxLength: 10})}
-	    />
-	    {errors.exampleRequired && <p>This field is required</p>}
-	    <input type="submit" />
-	</form>
+	<div className="UpdateForm">
+	    <form onSubmit={handleSubmit(onSubmit)}>
+		<label>Update Name</label>
+		<input
+		    type="text"
+		    name="updateName"
+		    ref={register({ required: true, maxLength: 10})}
+		/>
+		{errors.updateName && errors.updateName.type === "required" && (
+		    <p>This field is required</p>
+		)}
+		<label>Update device type</label>
+		<input
+		    type="text"
+		    name="updateDevice"
+		    ref={register({ required: false, maxLength: 10})}
+		/>
+		<br/>
+		<br/>
+		<input type="submit" />
+	    </form>
+	</div>
     );
 }
