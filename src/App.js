@@ -6,7 +6,7 @@ import { RelayList } from './components/RelayList';
 import { SingleRelay } from './components/SingleRelay';
 
 import { Navbar } from './components/Navbar';
-import { UpdateForm } from './components/updateForm';
+import { UpdateForm } from './components/UpdateForm';
 
 function App() {
     return (
