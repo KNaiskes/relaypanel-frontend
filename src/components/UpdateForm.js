@@ -41,7 +41,7 @@ export function UpdateForm() {
 		{errors.updateName && errors.updateName.type === "required" && (
 		    <p>This field is required</p>
 		)}
-		<label>Update device type</label>
+		<label>Update Type</label>
 		<input
 		    type="text"
 		    name="updateDevice"
